@@ -210,10 +210,7 @@ namespace Microsoft.AppCenter.Test.Functional.Distribute
             // Wait for processing event.
             result = await explicitCheckForUpdateTask;
 
-            // Verify response.
-            Assert.Equal("GET", result.Method);
-            Assert.True(result.Uri.Contains(urlDiff));
-            Assert.True(result.Uri.Contains(Config.ResolveAppSecret()));
+            
         }
 
         [Fact]
